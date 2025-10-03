@@ -7,7 +7,7 @@ sounds.forEach((sound) => {
   // hidden audio element
   const audio = document.createElement('audio');
   audio.id = sound;
-  audio.src = `./sounds/${sound}.mp3;`
+  audio.src = `./sounds/${sound}.mp3`;
   audio.preload = 'auto';
   document.body.appendChild(audio);
 
@@ -15,7 +15,6 @@ sounds.forEach((sound) => {
   const btn = document.createElement('button');
   btn.className = 'btn';
   btn.textContent = sound;
-	btn.appendChild(audio);
 
   btn.addEventListener('click', () => {
     stopSounds();
@@ -40,6 +39,6 @@ function stopSounds() {
     const el = document.getElementById(sound);
     if (!el) return;
     el.pause();
-    el.currentTime = 0;
-  });
+    el.currentTime = 0;
+  });
 }
